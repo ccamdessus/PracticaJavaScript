@@ -91,3 +91,52 @@ function anteriorDelTriple(numero) {
 var numero = 2
 var anteriorDelTripleNumero = numero * 3 - 1
 console.log("El anterior del triple del numero es: " + anteriorDelTripleNumero)
+
+var misDatos = {
+    nombre: "Cristobal",
+    apellido: "Camdessus",
+    dni: "45617906",
+    edad: "19",
+    comidasFavoritas: ["Hamburguesa", "Milanesa", "Asado"],
+    saludar: function() {
+        return "Hola, mi nombre es " + this.nombre + " " + this.apellido + " y tengo " + this.edad + " años. Mi comida favorita es " + this.comidasFavoritas[0];
+    }
+};
+console.log(misDatos.saludar())
+
+var auto = {
+    marca: "Toyota",
+    modelo: "Corolla",
+    anio: 2022,
+    color: "Negro",
+    posicion: 0,
+    avanzar: function(n) {
+        if (n > 0) {
+            this.posicion += n;
+        }
+    },
+    retroceder: function(n) {
+        if (n > 0) {
+            this.posicion -= n;
+        }
+    }
+};
+auto.avanzar(10); 
+auto.retroceder(5);
+
+console.log("La posición final del auto es: " + auto.posicion);
+
+var nuevoAuto = {
+    marca: "Toyota",
+    modelo: "Corolla",
+    anio: 2022,
+    color: "Negro",
+    posicion: 0,
+    moverse: function(n) {
+        this.posicion += n;
+    }
+};
+
+nuevoAuto.moverse(10);
+
+console.log("La posición final del auto es: " + nuevoAuto.posicion);
