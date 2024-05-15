@@ -138,5 +138,33 @@ var nuevoAuto = {
 };
 
 nuevoAuto.moverse(10);
-
 console.log("La posición final del auto es: " + nuevoAuto.posicion);
+
+var ironMan = {
+    nombre: "Iron Man",
+    equipo: "Avengers",
+    poderes: ["Volar", "Lanzar misiles", "Disparar láser"],
+    energia: 100,
+    getPoder: function(numeroPoder) {
+        this.energia -= 10; 
+        var poderElegido = this.poderes[numeroPoder];
+        return "Poder Elegido de " + this.nombre + ": " + poderElegido + ". Energía restante: " + this.energia;
+    }
+};
+
+var Hulk = {
+    nombre: "Hulk",
+    equipo: "Avengers",
+    poderes: ["Aplastar", "Gritar", "Golpear"],
+    energia: 100,
+    getPoder: function(numeroPoder) {
+        this.energia -= 10; 
+        var poderElegido = this.poderes[numeroPoder];
+        return "Poder Elegido de " + this.nombre + ": " + poderElegido + ". Energía restante: " + this.energia;
+    }
+};
+var indicesPoderes = [0, 1, 2];
+
+for (var i = 0; i < indicesPoderes.length; i++) 
+    console.log(ironMan.getPoder(indicesPoderes[i]));
+    console.log(Hulk.getPoder(indicesPoderes[i]));
